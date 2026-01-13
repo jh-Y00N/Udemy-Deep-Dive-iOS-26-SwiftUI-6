@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MessagesView: View {
-    let messages = [DataItemModel(text: "Hello there!", color: .green), DataItemModel(text: "Welcome to Swift Programming", color: .gray), DataItemModel(text: "Are you ready to", color: .yellow), DataItemModel(text: "start exploring?", color: .red), DataItemModel(text: "Boom", color: .purple)]
+    let messages = [DataItemModel(text: "Hello there!", color: .myGreen), DataItemModel(text: "Welcome to Swift Programming", color: .myGray), DataItemModel(text: "Are you ready to", color: .myYellow), DataItemModel(text: "start exploring?", color: .myRed), DataItemModel(text: "Boom", color: .myPurple)]
     
     var body: some View {
         VStack(alignment: .leading) {
