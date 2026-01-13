@@ -18,8 +18,8 @@ struct TitleView: View {
         isRotated ? .zero : Angle(degrees: 360)
     }
     
-    @State private var subtitle = "Exploring iOS Programming"
-    let subtitles = [
+    @State private var subtitle: LocalizedStringKey = "Exploring iOS Programming"
+    let subtitles: [LocalizedStringKey] = [
         "Exploring iOS Programming",
         "Learning how to bake",
         "Programming recipes",
@@ -37,7 +37,7 @@ struct TitleView: View {
                     .fontWeight(.thin)
             }
             .onTapGesture {
-                subtitle = subtitles.randomElement() ?? "Exploring iOS Programming"
+                subtitle = subtitles.randomElement() ?? LocalizedStringKey("Exploring iOS Programming")
             }
             Spacer()
             Circle()
