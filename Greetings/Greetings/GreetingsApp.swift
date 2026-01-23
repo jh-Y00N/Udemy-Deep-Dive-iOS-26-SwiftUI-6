@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 @main
 struct GreetingsApp: App {
@@ -17,11 +18,23 @@ struct GreetingsApp: App {
     var layoutDirection: LayoutDirection {
         languageDirection == LEFT_TO_RIGHT ? .leftToRight : .rightToLeft
     }
+    
+    let resetTip = true
+    
     var body: some Scene {
         WindowGroup {
             MainView(language: $language, layoutDirectionString: $languageDirection)
                 .environment(\.locale, Locale(identifier: language))
                 .environment(\.layoutDirection, layoutDirection)
+                .task {
+                    if resetTip {
+                        try? Tips.resetDatastore()
+                    }
+                    try? Tips.configure([
+                        .displayFrequency(.immediate),
+                        .datastoreLocation(.applicationDefault)
+                    ])
+                }
         }
     }
 }
