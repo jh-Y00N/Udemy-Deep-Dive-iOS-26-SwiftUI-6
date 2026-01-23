@@ -11,6 +11,16 @@ struct TextView: View {
     let text: LocalizedStringKey
     @State var color: Color
     
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    
+    var isIPad: Bool {
+        horizontalSizeClass == .regular && verticalSizeClass == .regular
+    }
+    var font: Font {
+        isIPad ? .largeTitle : .body
+    }
+    
     let colors: [Color] = [
         .red,
         .green,
@@ -27,6 +37,7 @@ struct TextView: View {
     var body: some View {
         Text(text)
             .fontWeight(.semibold)
+            .font(font)
             .padding()
             .foregroundStyle(.white)
             .background(color.opacity(0.4))
