@@ -6,11 +6,83 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0729E79E2F242E13003421AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0729E7992F242E13003421AC /* Assets.xcassets */; };
+		0729E7A02F242E13003421AC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0729E79D2F242E13003421AC /* Localizable.xcstrings */; };
+		0729E7AE2F242E13003421AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729E79A2F242E13003421AC /* Constants.swift */; };
+		0729E7D42F2434C5003421AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0729E7992F242E13003421AC /* Assets.xcassets */; };
+		0729E7D52F2434D4003421AC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0729E79D2F242E13003421AC /* Localizable.xcstrings */; };
+		0729E7D62F2434D9003421AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729E79A2F242E13003421AC /* Constants.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		0729E77E2F242D9E003421AC /* Greetings-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Greetings-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0729E7992F242E13003421AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0729E79A2F242E13003421AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0729E79D2F242E13003421AC /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		07F31DBB2F12E7E200D0D2CE /* Greetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Greetings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0729E7D22F243430003421AC /* Exceptions for "Model" folder in "Greetings" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DataItemModel.swift,
+			);
+			target = 07F31DBA2F12E7E200D0D2CE /* Greetings */;
+		};
+		0729E7D32F243430003421AC /* Exceptions for "Tips" folder in "Greetings" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				GreetingsTip.swift,
+			);
+			target = 07F31DBA2F12E7E200D0D2CE /* Greetings */;
+		};
+		0729E7D82F2434ED003421AC /* Exceptions for "Model" folder in "Greetings-Mac" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DataItemModel.swift,
+			);
+			target = 0729E77D2F242D9E003421AC /* Greetings-Mac */;
+		};
+		0729E7DA2F2434F2003421AC /* Exceptions for "Tips" folder in "Greetings-Mac" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				GreetingsTip.swift,
+			);
+			target = 0729E77D2F242D9E003421AC /* Greetings-Mac */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		0729E77F2F242D9E003421AC /* Greetings-Mac */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Greetings-Mac";
+			sourceTree = "<group>";
+		};
+		0729E7B82F24342F003421AC /* Model */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0729E7D22F243430003421AC /* Exceptions for "Model" folder in "Greetings" target */,
+				0729E7D82F2434ED003421AC /* Exceptions for "Model" folder in "Greetings-Mac" target */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0729E7BA2F24342F003421AC /* Tips */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0729E7D32F243430003421AC /* Exceptions for "Tips" folder in "Greetings" target */,
+				0729E7DA2F2434F2003421AC /* Exceptions for "Tips" folder in "Greetings-Mac" target */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
+		0729E7C52F24342F003421AC /* View */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = View;
+			sourceTree = "<group>";
+		};
 		07F31DBD2F12E7E200D0D2CE /* Greetings */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Greetings;
@@ -19,6 +91,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0729E77B2F242D9E003421AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07F31DB82F12E7E200D0D2CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +108,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0729E7B62F243229003421AC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0729E7992F242E13003421AC /* Assets.xcassets */,
+				0729E79A2F242E13003421AC /* Constants.swift */,
+				0729E79D2F242E13003421AC /* Localizable.xcstrings */,
+				0729E7B82F24342F003421AC /* Model */,
+				0729E7BA2F24342F003421AC /* Tips */,
+				0729E7C52F24342F003421AC /* View */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		07F31DB22F12E7E200D0D2CE = {
 			isa = PBXGroup;
 			children = (
+				0729E7B62F243229003421AC /* Shared */,
 				07F31DBD2F12E7E200D0D2CE /* Greetings */,
+				0729E77F2F242D9E003421AC /* Greetings-Mac */,
 				07F31DBC2F12E7E200D0D2CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				07F31DBB2F12E7E200D0D2CE /* Greetings.app */,
+				0729E77E2F242D9E003421AC /* Greetings-Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +143,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0729E77D2F242D9E003421AC /* Greetings-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0729E7862F242DA1003421AC /* Build configuration list for PBXNativeTarget "Greetings-Mac" */;
+			buildPhases = (
+				0729E77A2F242D9E003421AC /* Sources */,
+				0729E77B2F242D9E003421AC /* Frameworks */,
+				0729E77C2F242D9E003421AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0729E77F2F242D9E003421AC /* Greetings-Mac */,
+				0729E7C52F24342F003421AC /* View */,
+			);
+			name = "Greetings-Mac";
+			packageProductDependencies = (
+			);
+			productName = "Greetings-Mac";
+			productReference = 0729E77E2F242D9E003421AC /* Greetings-Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
 		07F31DBA2F12E7E200D0D2CE /* Greetings */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07F31DC62F12E7E700D0D2CE /* Build configuration list for PBXNativeTarget "Greetings" */;
@@ -61,6 +179,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				0729E7C52F24342F003421AC /* View */,
 				07F31DBD2F12E7E200D0D2CE /* Greetings */,
 			);
 			name = Greetings;
@@ -77,9 +196,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2610;
+				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
+					0729E77D2F242D9E003421AC = {
+						CreatedOnToolsVersion = 26.2;
+					};
 					07F31DBA2F12E7E200D0D2CE = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
@@ -103,31 +225,131 @@
 			projectRoot = "";
 			targets = (
 				07F31DBA2F12E7E200D0D2CE /* Greetings */,
+				0729E77D2F242D9E003421AC /* Greetings-Mac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0729E77C2F242D9E003421AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0729E7D42F2434C5003421AC /* Assets.xcassets in Resources */,
+				0729E7D52F2434D4003421AC /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07F31DB92F12E7E200D0D2CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0729E79E2F242E13003421AC /* Assets.xcassets in Resources */,
+				0729E7A02F242E13003421AC /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0729E77A2F242D9E003421AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0729E7D62F2434D9003421AC /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07F31DB72F12E7E200D0D2CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0729E7AE2F242E13003421AC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		0729E7872F242DA1003421AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A8M5S3F2UH;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jihyeon.Greetings-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0729E7882F242DA1003421AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A8M5S3F2UH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jihyeon.Greetings-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		07F31DC42F12E7E700D0D2CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -280,7 +502,8 @@
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -325,7 +548,8 @@
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -339,6 +563,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0729E7862F242DA1003421AC /* Build configuration list for PBXNativeTarget "Greetings-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0729E7872F242DA1003421AC /* Debug */,
+				0729E7882F242DA1003421AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		07F31DB62F12E7E200D0D2CE /* Build configuration list for PBXProject "Greetings" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

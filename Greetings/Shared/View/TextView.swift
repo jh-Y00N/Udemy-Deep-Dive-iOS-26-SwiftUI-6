@@ -18,7 +18,11 @@ struct TextView: View {
         horizontalSizeClass == .regular && verticalSizeClass == .regular
     }
     var font: Font {
+        #if os(macOS)
+        .title
+        #else
         isIPad ? .largeTitle : .body
+        #endif
     }
     
     let colors: [Color] = [
